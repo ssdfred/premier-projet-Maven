@@ -49,24 +49,9 @@
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
-        <version>${exec.maven.plugin.version}</version>
-        <executions>
-          <execution>
-            <phase>pre-clean</phase>
-            <goals>
-              <goal>exec</goal>
-            </goals>
-          </execution>
-        </executions>
+        <version>3.0.0</version>
         <configuration>
-          <executable>xcopy</executable>
-          <arguments>
-            <argument>target</argument>
-            <argument>target-backup</argument>
-            <argument>/E</argument>
-            <argument>/I</argument>
-            <argument>/Y</argument>
-          </arguments>
+          <mainClass>${mainClass}</mainClass>
         </configuration>
       </plugin>
     </plugins>
